@@ -1,0 +1,28 @@
+package com.wipro.bank.acc;
+
+public abstract class Account {
+	public int tenure;
+	public float principal;
+	public float rateOfInterest;
+	public void setInterest(int age,String gender) {
+		if(age<60&&gender.equals(gender)) {
+			this.rateOfInterest=9.8f;
+		}
+		else {
+			this.rateOfInterest=10.5f;
+		}
+		if(age<58&&gender.equals(gender)) {
+			this.rateOfInterest=10.2f;
+		}
+		else {
+			this.rateOfInterest=10.8f;
+		}
+	}
+	public float CalculationMaturityAmount(float totalprincipalDeposited,float maturityInterest) {
+		return totalprincipalDeposited+maturityInterest;
+	}
+	public abstract float calculateInterest();
+	public abstract float calculateAmountDeposited();
+	
+
+}
