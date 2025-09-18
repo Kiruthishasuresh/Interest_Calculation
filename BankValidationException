@@ -1,0 +1,8 @@
+package com.wipro.bank.exception;
+@SuppressWarnings("serial")
+public class BankValidationException extends Exception{
+	public String tostring() {
+		return "InvalidData";
+	}
+
+}
